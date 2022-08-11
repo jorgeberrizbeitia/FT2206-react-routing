@@ -1,6 +1,11 @@
 
 import './App.css';
+import { Routes, Route, Link } from "react-router-dom"
+
+import Home from "./pages/Home"
+import Profile from "./pages/Profile"
 import TimerControl from './pages/TimerControl';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -8,15 +13,26 @@ function App() {
 
       <h3>Lifecycles y routing</h3>
 
-      <TimerControl />
-      <TimerControl />
-      <TimerControl />
-      <TimerControl />
-      <TimerControl />
-      <TimerControl />
-      <TimerControl />
-      <TimerControl />
-      <TimerControl />
+      {/* <TimerControl /> */}
+
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/timer">Timer</Link>
+        <br />
+        <Link to="/profile/malva">Perfil de Malva</Link>
+        <Link to="/profile/pablo">Perfil de Pablo</Link>
+        <Link to="/profile/rebeca">Perfil de Rebeca</Link>
+      </nav>
+
+      <Routes>
+        {/* aqui iran todas las definiciones de nuestras rutas (accesos por URL) */}
+
+        <Route path="/" element={ <Home /> }/>
+        <Route path="/timer" element={ <TimerControl /> }/>
+        <Route path="/profile/:name" element={ <Profile /> }/>
+        <Route path="*" element={ <NotFound /> }/>
+
+      </Routes>
 
     </div>
   );
