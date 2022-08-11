@@ -61,7 +61,7 @@ function App() {
         <Routes>
 
           <Route path="/" element={ <Home /> }/>
-          <Route path="/poke-profile" element={ <PokemonProfile /> }/>
+          <Route path="/poke-profile/:pokeName" element={ <PokemonProfile /> }/>
           <Route path="*" element={ <NotFound /> }/>
 
         </Routes>
