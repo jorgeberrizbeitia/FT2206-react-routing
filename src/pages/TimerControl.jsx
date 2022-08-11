@@ -14,7 +14,7 @@ function TimerControl() {
 
       <button onClick={handleToggle}>{isTimerShowing ? "Ocultar" : "Mostrar"} Timer</button>
 
-      {isTimerShowing === true && <Timer />}
+      {isTimerShowing === true && <Timer handleToggle={handleToggle}/>}
 
     </div>
   )

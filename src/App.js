@@ -9,6 +9,14 @@ function App() {
       <h3>Lifecycles y routing</h3>
 
       <TimerControl />
+      <TimerControl />
+      <TimerControl />
+      <TimerControl />
+      <TimerControl />
+      <TimerControl />
+      <TimerControl />
+      <TimerControl />
+      <TimerControl />
 
     </div>
   );
